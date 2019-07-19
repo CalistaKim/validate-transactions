@@ -47,11 +47,8 @@ module.exports = {
       loadAmount_week: 0,
       loadCount: 0
     };
-    console.log(this.loadHistory);
-    console.log("customer_id ", customer_id);
-    console.log(this.loadHistory[customer_id]);
+
     if (!this.loadHistory[customer_id]) {
-      console.log("NULL!!!!!!!!");
       this.loadHistory[customer_id] = [currentLoadRequest];
       return null;
     }
