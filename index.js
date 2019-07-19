@@ -6,8 +6,7 @@ fs.readFile("./input.txt", (err, data) => {
   const sourceData = JSON.parse(
     "[" + data.toString().replace(/(\n)/g, ",\n") + "]"
   );
-  const formattedData = helpers.storeLoadRequests(sourceData);
-  const output = helpers.handleLoadRequestWrapper(sourceData, formattedData);
+  const output = helpers.handleLoadRequestWrapper(sourceData);
   submitLoadResponses(output);
 });
 
